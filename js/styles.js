@@ -1,7 +1,7 @@
 const HandwritingStyles = {
     kaishu: {
         name: '楷书',
-        fontFamily: '"KaiTi", "STKaiti", "楷体", serif',
+        fontKey: 'kaishu',
         fontSize: 32,
         charSpacing: 2,
         lineHeight: 1.8,
@@ -15,7 +15,7 @@ const HandwritingStyles = {
     
     xingshu: {
         name: '行书',
-        fontFamily: '"STXingkai", "华文行楷", "KaiTi", cursive',
+        fontKey: 'xingshu',
         fontSize: 34,
         charSpacing: 0,
         lineHeight: 1.7,
@@ -29,7 +29,7 @@ const HandwritingStyles = {
     
     caoshu: {
         name: '草书',
-        fontFamily: '"STCaiyun", "华文彩云", "STXingkai", cursive',
+        fontKey: 'caoshu',
         fontSize: 36,
         charSpacing: -2,
         lineHeight: 1.6,
@@ -37,13 +37,13 @@ const HandwritingStyles = {
         inkDensity: 70,
         randomOffset: 6,
         strokeNoise: 50,
-        weight: 'bold',
+        weight: 'normal',
         description: '笔走龙蛇，气势磅礴'
     },
     
     shoujie: {
         name: '瘦金体',
-        fontFamily: '"STShouti", "华文宋体", "SimSun", serif',
+        fontKey: 'shoujie',
         fontSize: 30,
         charSpacing: 4,
         lineHeight: 1.9,
@@ -57,7 +57,7 @@ const HandwritingStyles = {
     
     custom: {
         name: '自定义',
-        fontFamily: 'serif',
+        fontKey: 'custom',
         fontSize: 32,
         charSpacing: 2,
         lineHeight: 1.8,
@@ -69,3 +69,7 @@ const HandwritingStyles = {
         description: '使用自定义字体'
     }
 };
+
+if (typeof window !== 'undefined') {
+    window.HandwritingStyles = HandwritingStyles;
+}
