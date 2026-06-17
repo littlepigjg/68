@@ -18,7 +18,8 @@ class HandwritingApp {
         this.showLoading();
         
         try {
-            await FontLoader.loadGoogleFont('kaishu');
+            await FontLoader.loadAllFonts();
+            console.log('所有字体预加载完成');
         } catch (error) {
             console.warn('预加载字体失败:', error);
         }
